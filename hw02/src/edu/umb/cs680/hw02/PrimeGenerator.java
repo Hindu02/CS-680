@@ -5,26 +5,18 @@ import java.util.LinkedList;
 
 public class PrimeGenerator {
 
-	private static PrimeGenerator gen;
+	private static PrimeGenerator gen = null;
 	protected static long FROM, TO;
+	private PrimeGenerator() {}
 	protected LinkedList<Long> primes = new LinkedList<Long>();
 
-	public static PrimeGenerator getInstance(long from, long to) {
+	public static PrimeGenerator getInstance() {
 		if (gen == null) {
-			gen = new PrimeGenerator(from, to);
-			return gen;
+			gen = new PrimeGenerator();
 		}
-
-		if (from >= 1 && to > from) {
-			FROM = from;
-			TO = to;
-			return gen;
-		} else {
-			throw new RuntimeException("Wrong input values: from=" + from + " to=" + to);
-		}
+		return gen;
 	}
-
-	private PrimeGenerator(long from, long to) {
+	public void fromto(long from, long to){
 		if (from >= 1 && to > from) {
 			FROM = from;
 			TO = to;
@@ -32,6 +24,7 @@ public class PrimeGenerator {
 			throw new RuntimeException("Wrong input values: from=" + from + " to=" + to);
 		}
 	}
+
 
 	public LinkedList<Long> getPrimes() {
 		return primes;
@@ -76,7 +69,8 @@ public class PrimeGenerator {
 	}
 
 	public static void main(String[] args) {
-		PrimeGenerator gen = new PrimeGenerator(1, 100);
+		PrimeGenerator gen = PrimeGenerator.getInstance();
+		gen.fromto(1,100);
 		gen.generatePrimes();
 		LinkedList<Long> primes = gen.getPrimes();
 		Iterator<Long> it = primes.iterator();

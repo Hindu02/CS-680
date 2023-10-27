@@ -10,19 +10,22 @@ import java.util.LinkedList;
 public class PrimeGeneratorTest {
     
     public void verifyGetInstanceIsNotNull() {
-        PrimeGenerator generator = PrimeGenerator.getInstance(1, 34);
-        assertNotNull(generator);
+        PrimeGenerator primeGenerator = PrimeGenerator.getInstance();
+        assertNotNull(primeGenerator);
     }
 
     public void verifyGetInstanceReturnSameObject() {
-        PrimeGenerator generator1 = PrimeGenerator.getInstance(1, 34);
-        PrimeGenerator generator2 = PrimeGenerator.getInstance(1, 20);
+        PrimeGenerator generator1 = PrimeGenerator.getInstance();
+        generator1.fromto(1, 34);
+        PrimeGenerator generator2 = PrimeGenerator.getInstance();
+        generator2.fromto(1, 20);
         assertSame(generator1, generator2);
     }
 
     @Test
     public void verifyGeneratePrimesFrom1to9() {
-        PrimeGenerator gen = PrimeGenerator.getInstance(1, 10);
+        PrimeGenerator gen = PrimeGenerator.getInstance();
+        gen.fromto(1, 10);
         gen.generatePrimes();
         LinkedList<Long> primes = gen.getPrimes();
         LinkedList<Long> expected = new LinkedList<>();
@@ -35,7 +38,8 @@ public class PrimeGeneratorTest {
 
     @Test
     public void verifyGeneratePrimesFrom1to5() {
-        PrimeGenerator gen = PrimeGenerator.getInstance(1, 5);
+        PrimeGenerator gen = PrimeGenerator.getInstance();
+        gen.fromto(1, 5);
         gen.generatePrimes();
         LinkedList<Long> primes = gen.getPrimes();
         LinkedList<Long> expected = new LinkedList<>();
@@ -48,7 +52,8 @@ public class PrimeGeneratorTest {
     @Test
     public void verifyExceptionWhenFromGreaterThanTo() {
         try {
-            PrimeGenerator gen = PrimeGenerator.getInstance(3, 1);
+            PrimeGenerator gen = PrimeGenerator.getInstance();
+            gen.fromto(3, 1);
             fail();
         } catch (RuntimeException e) {
             assertEquals("Wrong input values: from=" + 3 + " to=" + 1, e.getMessage());
@@ -58,7 +63,8 @@ public class PrimeGeneratorTest {
     @Test
     public void verifyExceptionWhenFromEqualToTo() {
         try {
-            PrimeGenerator gen = PrimeGenerator.getInstance(1, 1);
+            PrimeGenerator gen = PrimeGenerator.getInstance();
+            gen.fromto(1, 1);
             fail();
         } catch (RuntimeException e) {
             assertEquals("Wrong input values: from=" + 1 + " to=" + 1, e.getMessage());
