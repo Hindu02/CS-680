@@ -18,7 +18,6 @@ public class OffState implements State{
 
     public void ignitionPressed() {
         // when the engine is off and ignition is pressed, the engine starts
-        car.turnOn();
         car.changeState(new IdleState(car));
     }
     
