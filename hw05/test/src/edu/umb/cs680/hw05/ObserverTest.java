@@ -55,12 +55,5 @@ public class ObserverTest {
         assertIterableEquals(expected, sensor.getObservers());
     }
 
-    @Test
-    public void checkNotifyObserversMethod() {
-        Sensor sensor = getInstance();
-        sensor.notifyObservers(20.0f);
-
-        assert(true);
-    }
 
 }
