@@ -23,7 +23,7 @@ public class IdleState implements State{
     public void ignitionPressed() {
         // when car engine is on, and the car is stationary and ignition is pressed,
         // the car engine switches off
-        car.turnOff();
+        car.speed = 0;
         car.changeState(new OffState(car));
     }
 }
