@@ -3,22 +3,11 @@ package edu.umb.cs680.hw04;
 public class Car {
     
     private State state;
-    private int speed;
-    private boolean isEngineRunning;
+    protected int speed;
 
     public Car() {
         this.state = new OffState(this);
         this.speed = 0;
-        this.isEngineRunning = false;
-    }
-
-    public void turnOn() {
-        isEngineRunning = true;
-    }
-
-    public void turnOff() {
-        isEngineRunning = false;
-        speed = 0;
     }
 
     public void accelerate() {
@@ -26,7 +15,7 @@ public class Car {
     }
 
     public void brake() {
-        speed = 0;
+        speed = speed - 5;
     }
 
     public void changeState(State state) {
