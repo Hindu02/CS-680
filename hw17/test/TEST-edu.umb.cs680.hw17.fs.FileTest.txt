@@ -1,0 +1,8 @@
+Testcase: edu.umb.cs680.hw17.fs.FileTest
+Test: verifyFileToStringArrayA() took 0 milli sec(s)
+Test: verifyFileToStringArrayB() took 0 milli sec(s)
+Test: verifyIsDirectory() took 1 milli sec(s)
+Test: verifyFileToStringArrayATest() took 0 milli sec(s)
+Test: verifyFileToStringArrayBTest() took 0 milli sec(s)
+Test: verifyFileToStringArrayReadme() took 0 milli sec(s)
+Tests run: 6, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 3 milli sec(s)
