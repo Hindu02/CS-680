@@ -1,0 +1,9 @@
+Testcase: edu.umb.cs680.hw11.DistanceTest
+Test: verifyManhattanDistance() took 8 milli sec(s)
+Test: verifyEuclideanDistance() took 0 milli sec(s)
+Test: verifyCosineMatrix() took 0 milli sec(s)
+Test: verify1000RandomCars() took 47 milli sec(s)
+Test: verifyEuclideanMatrix() took 0 milli sec(s)
+Test: verifyManhattanMatrix() took 0 milli sec(s)
+Test: verifyCosineDistance() took 0 milli sec(s)
+Tests run: 7, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 62 milli sec(s)

@@ -1,0 +1,6 @@
+Testcase: edu.umb.cs680.hw10.fs.FileSystemTest
+Test: verifyAppendRootDir() took 0 milli sec(s)
+Test: verifySingletonFileSystem() took 0 milli sec(s)
+Test: verifySingletonFileSystemNotNull() took 1 milli sec(s)
+Test: verifyGetRootDirs() took 1 milli sec(s)
+Tests run: 4, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 5 milli sec(s)
