@@ -1,0 +1,12 @@
+Testcase: edu.umb.cs680.hw15.fs.DirectoryTest
+Test: verifyGetFiles() took 0 milli sec(s)
+Test: verifyGetLinks() took 1 milli sec(s)
+Test: verifyCountChildren() took 0 milli sec(s)
+Test: verifyDirToStringArrayTestSrc() took 1 milli sec(s)
+Test: verifyIsDirectory() took 0 milli sec(s)
+Test: verifyGetSubDirectories() took 0 milli sec(s)
+Test: verifyDirToStringArrayRepo() took 0 milli sec(s)
+Test: verifyDirToStringArrayTest() took 1 milli sec(s)
+Test: verifyDirToStringArraySrc() took 0 milli sec(s)
+Test: verifyGetTotalSize() took 1 milli sec(s)
+Tests run: 10, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 6 milli sec(s)
