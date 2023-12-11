@@ -1,5 +1,0 @@
-Testcase: edu.umb.cs680.hw17.fs.ComparatorTest
-Test: verifySizeComparator() took 4 milli sec(s)
-Test: verifyReverseAlphabeticalComparator() took 1 milli sec(s)
-Test: verifyAlphabeticalComparator() took 0 milli sec(s)
-Tests run: 3, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 14 milli sec(s)
